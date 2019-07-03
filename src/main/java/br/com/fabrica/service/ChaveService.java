@@ -13,7 +13,7 @@ import br.com.fabrica.repository.ChaveRepository;
 @Service
 public class ChaveService {
 	
-	// Inserir metodos de inserção, listagem unica e listar todos.
+	
 	
 	@Autowired
 	private ChaveRepository chaveRepository;

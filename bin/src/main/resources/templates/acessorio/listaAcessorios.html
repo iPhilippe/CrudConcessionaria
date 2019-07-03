@@ -4,9 +4,9 @@
 <meta charset="UTF-8"/>
 <meta http-equiv="Content-Type" content="text/html; charset-8"/>
 <meta name="viewport" content="width=device-width" />
-<title>Listagem de Acessorios</title>
+<title>Listagem de Acessórios</title>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"></link>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 	
@@ -17,17 +17,29 @@
 					<tr>
 						<th>ID</th>
 						<th>NOME</th>
+						<th>Preço</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr th:each="acessorio : ${acessorios}">
 						<td th:text="${acessorio.id}"></td>
 						<td th:text="${acessorio.nome}"></td>
+						<td th:text="${acessorio.preco}"></td>
+						<td>
+						<div class="btn-group pull-right">
+							<a class="btn btn-sm btn-primary" th:href="@{/acessorio/alterar/{id}(id=${acessorio.id})}"> Editar </a>
+							<a class="delete btn btn-sm btn-danger" th:href="@{/acessorio/excluir/{id}(id=${acessorio.id})}">Excluir</a>
+						</div>
+					</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 	</div>
-
+	<div class-"panel-footer">
+		<a class="btn btn-sm btn-success" th:href="@{/acessorio/adicionar}">  Adicionar </a>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

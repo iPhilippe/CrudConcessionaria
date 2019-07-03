@@ -23,7 +23,7 @@
 				<tbody>
 					<tr th:each="cha : ${carros}">
 						<td th:text="${cha.chassi}"></td>	
-						<td th:text="${cha.codigo}"></td>
+						<td th:text="${cha.modelo}"></td>
 					<td>
 						<div class="btn-group pull-right">
 							<a class="btn btn-sm btn-primary" th:href="@{/chave/alterar/{chassi}(chassi=${cha.chassi})}"> Editar </a>
