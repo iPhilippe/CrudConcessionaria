@@ -31,6 +31,11 @@ public class Carro implements Serializable{
 	@JoinColumn(name = "chave_id", referencedColumnName = "id")
 	private Chave chave;
 	
+	@OneToOne
+	@JoinColumn(name = "documento_id", referencedColumnName = "id")
+	private Documento documento;
+	
+
 	@ManyToOne
 	@JoinColumn(name = "fabricante_id", referencedColumnName = "id")
 	private Fabricante fabricante;
@@ -42,7 +47,12 @@ public class Carro implements Serializable{
 		inverseJoinColumns = @JoinColumn(name = "acessorio_id"))
 	private List<Acessorio> acessorios;
 
-	
+	public Documento getDocumento() {
+		return documento;
+	}
+	public void setDocumento(Documento documento) {
+		this.documento = documento;
+	}
 	public Integer getChassi() {
 		return chassi;
 	}
