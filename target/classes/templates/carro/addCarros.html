@@ -12,8 +12,19 @@
 <body>
 	<div class="container">
 		<div class="panel-heading" align="center">
-			<strong>Cadastro de Carros</strong>
+			<h2>Cadastro de Carros</h2>
 		</div>
+		<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<ul class="nav navbar-nav">
+					    	<li><a th:href="@{/acessorio/listar}">Acessórios</a></li>
+					      	<li><a th:href="@{/carro/listar}">Carro</a></li>
+					      	<li><a th:href="@{/chave/listar}">Chave</a></li>
+					      	<li><a th:href="@{/documento/listar}">Documento</a></li>
+					      	<li><a th:href="@{/fabricante/listar}">Fabricante</a></li>
+					    </ul>
+					</div>
+				</nav>
 	<div class="panel-body">
 	<form class="form-horizontal" th:object="${carro}" th:action="@{/carro/salvar}" method="post" style="margin: 10px">
 		<div class="form-group">

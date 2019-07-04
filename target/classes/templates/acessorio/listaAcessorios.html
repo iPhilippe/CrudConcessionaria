@@ -11,24 +11,39 @@
 <body>
 	
 	<div class="panel-body">
+	<div class="panel-heading" align="center">
+			<h2>Acessórios</h2>
+		</div>
+		<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<ul class="nav navbar-nav">
+					    	<li><a th:href="@{/acessorio/listar}">Acessórios</a></li>
+					      	<li><a th:href="@{/carro/listar}">Carro</a></li>
+					      	<li><a th:href="@{/chave/listar}">Chave</a></li>
+					      	<li><a th:href="@{/documento/listar}">Documento</a></li>
+					      	<li><a th:href="@{/fabricante/listar}">Fabricante</a></li>
+					    </ul>
+					</div>
+				</nav>
 		<div class="table-resposive">
 			<table class="table table-sm table-striped table-hover table-bordered">
 				<thead>
 					<tr>
-						<th>ID</th>
-						<th>NOME</th>
+						<th>Id</th>
+						<th>Nome</th>
 						<th>Preço</th>
+						<th>Ações</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr th:each="acessorio : ${acessorios}">
-						<td th:text="${acessorio.id}"></td>
-						<td th:text="${acessorio.nome}"></td>
-						<td th:text="${acessorio.preco}"></td>
+					<tr th:each="ace : ${acessorios}">
+						<td th:text="${ace.id}"></td>
+						<td th:text="${ace.nome}"></td>
+						<td th:text="${ace.preco}"></td>
 						<td>
 						<div class="btn-group pull-right">
-							<a class="btn btn-sm btn-primary" th:href="@{/acessorio/alterar/{id}(id=${acessorio.id})}"> Editar </a>
-							<a class="delete btn btn-sm btn-danger" th:href="@{/acessorio/excluir/{id}(id=${acessorio.id})}">Excluir</a>
+							<a class="btn btn-sm btn-primary" th:href="@{/acessorio/alterar/{id}(id=${ace.id})}"> Editar </a>
+							<a class="delete btn btn-sm btn-danger" th:href="@{/acessorio/excluir/{id}(id=${ace.id})}">Excluir</a>
 						</div>
 					</td>
 					</tr>
