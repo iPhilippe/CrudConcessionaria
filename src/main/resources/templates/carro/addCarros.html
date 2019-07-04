@@ -33,7 +33,19 @@
 				<label> Modelo </label>
 				<input type="text" class="form-control input-sm" th:field="*{modelo}" autofocus="autofocus" placeholder="Informe o modelo"/>			
 			</div>
-		</fieldset>	
+			<div class="form-group row">
+				<label> Fabricante </label>
+				<input type="text" class="form-control input-sm" th:field="*{fabricante.nome}" autofocus="autofocus" placeholder="Informe o fabricante"/>			
+			</div>
+			<div class="form-group row">
+				<label> Número do documento</label>
+				<input type="text" class="form-control input-sm" th:field="*{documento.numero}" autofocus="autofocus" placeholder="Informe o documento"/>			
+			</div>
+			<div class="form-group row">
+				<label> Código </label>
+				<input type="text" class="form-control input-sm" th:field="*{chave.codigo}" autofocus="autofocus" placeholder="Informe o código"/>			
+			</div>
+		</fieldset>			
 	</div>
 	<div align="center">
 		<button type="submit" class="btn btn-sm brn-primary">Salvar</button>

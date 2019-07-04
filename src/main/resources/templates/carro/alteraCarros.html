@@ -33,7 +33,13 @@
 				<label> Chassi </label>
 				<input type="text" class="form-control input-sm" th:field="*{chassi}" id="chassi"autofocus="autofocus" readOnly="readonly"/>			
 				<label> Modelo </label>
-				<input type="text" class="form-control input-sm" th:field="*{modelo}" id="chassi"autofocus="autofocus" placeholder="Informe o modelo"/>			
+				<input type="text" class="form-control input-sm" th:field="*{modelo}" id="chassi"autofocus="autofocus" placeholder="Informe o modelo"/>	
+				<label> Fabricante </label>
+				<input type="text" class="form-control input-sm" th:field="*{fabricante.nome}" id="chassi"autofocus="autofocus" placeholder="Informe o fabricante"/>	
+				<label> Documento </label>
+				<input type="text" class="form-control input-sm" th:field="*{documento.numero}" id="chassi"autofocus="autofocus" placeholder="Informe o documento"/>	
+				<label> Código </label>
+				<input type="text" class="form-control input-sm" th:field="*{chave.codigo}" id="chassi"autofocus="autofocus" placeholder="Informe o código"/>		
 			</div>
 		</fieldset>	
 	</div>

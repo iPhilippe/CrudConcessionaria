@@ -3,6 +3,7 @@ package br.com.fabrica.dominio;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,7 +27,7 @@ public class Carro implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer chassi;
 	private String modelo;
-	
+		
 	@OneToOne
 	@JoinColumn(name = "chave_id", referencedColumnName = "id")
 	private Chave chave;
